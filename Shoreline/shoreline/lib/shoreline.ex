@@ -50,8 +50,7 @@ defmodule Shoreline do
 
     result=Map.put(result,val,children)
     if Enum.member?(queue, endingNode) do
-      result=Map.put(result,endingNode,[])
-      result
+      Map.put(result,endingNode,[])
     else
       doQueueNotEmpty(queue,network,endingNode,result,visited)
     end
